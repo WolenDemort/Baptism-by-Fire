@@ -16,5 +16,21 @@ public class ButtonControle : MonoBehaviour
         Application.Quit();
     }
 
-    
+    public void ScrollReturnOnHorizontal(GameObject gameObject)
+    {
+        ScrollRect _scroll = gameObject.GetComponent<ScrollRect>();
+     
+        _scroll.horizontalNormalizedPosition = 0;
+      
+    }
+
+    public void ScrollReturnOnVertical(GameObject gameObject)
+    {
+        ScrollRect _scroll = gameObject.GetComponent<ScrollRect>();
+
+        _scroll.verticalNormalizedPosition = 1;
+
+    }
+
+   
 }
