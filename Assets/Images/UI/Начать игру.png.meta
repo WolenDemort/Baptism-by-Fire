@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ac87414fc717d64aafeaeb93594ca20
+guid: 8d6aac0d44aca7e41a8b30d881d48b4d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -45,15 +45,15 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 49, y: 54, z: 52, w: 54}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -81,33 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -132,31 +106,58 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KNOPKA-NACHAT-IGRU_0
+      name: "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443_0"
       rect:
         serializedVersion: 2
-        x: 44
-        y: 55
-        width: 367
-        height: 73
+        x: 9
+        y: 9
+        width: 1903
+        height: 834
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -951.5, y: 417}
+        - {x: -944.5, y: 417}
+        - {x: -2.5, y: -407}
+        - {x: 19.5, y: -413}
+        - {x: 842.5, y: 306}
+        - {x: 951.5, y: 411}
+        - {x: 951.5, y: 417}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89068864c7df3d7419028ca3806abd3f
-      internalID: -1637669975
+      spriteID: 7df76d85f2d820d43837b4f6174b1362
+      internalID: -1201792902
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: -951, y: 421.5}
+      - {x: -951, y: 418.5}
+      - {x: -6, y: -398.5}
+      - {x: 11, y: -412.5}
+      - {x: 14, y: -412.5}
+      - {x: 950, y: 419.5}
+      - {x: 952, y: 421.5}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -167,7 +168,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KNOPKA-NACHAT-IGRU_0: -1637669975
+      "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443_0": -1201792902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
