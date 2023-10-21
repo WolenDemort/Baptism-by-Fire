@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -134,7 +134,35 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\u0412\u044B\u0445\u043E\u0434_0"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 1883
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 114.5}
+        - {x: -7.5, y: 114.5}
+        - {x: -846.5, y: -85.5}
+        - {x: -941.5, y: -114.5}
+        - {x: 941.5, y: -114.5}
+        - {x: 941.5, y: -110.5}
+        - {x: 937.5, y: -109.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721cfee1e34cac74ca8717b4fd5b9d6f
+      internalID: 2026143126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +173,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u0412\u044B\u0445\u043E\u0434_0": 2026143126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

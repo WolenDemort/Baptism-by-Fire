@@ -933,7 +933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 232257184}
         m_TargetAssemblyTypeName: AnimationFix, Assembly-CSharp
         m_MethodName: FixAnimation
         m_Mode: 1
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 080609b250867134a9402af9d93a0969, type: 3}
+  m_Sprite: {fileID: 2026143126, guid: 080609b250867134a9402af9d93a0969, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 641064231}
         m_TargetAssemblyTypeName: AnimationFix, Assembly-CSharp
         m_MethodName: FixAnimation
         m_Mode: 1
@@ -2566,7 +2566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9db14fbbcf327b842888e47df5a884f1, type: 3}
+  m_Sprite: {fileID: 1164136416, guid: 9db14fbbcf327b842888e47df5a884f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2715,6 +2715,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 644384272}
+        m_TargetAssemblyTypeName: AnimationFix, Assembly-CSharp
+        m_MethodName: FixAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1070290405}
         m_TargetAssemblyTypeName: ButtonControle, Assembly-CSharp
         m_MethodName: ButtonScensStart
@@ -2725,18 +2737,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameScene
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnimationFix, Assembly-CSharp
-        m_MethodName: FixAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &644384269
@@ -4027,7 +4027,7 @@ MonoBehaviour:
         m_MethodName: ScrollReturnOnHorizontal
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1290248274}
+          m_ObjectArgument: {fileID: 652547913}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6417,9 +6417,9 @@ GameObject:
   - component: {fileID: 1490354277}
   - component: {fileID: 1490354276}
   - component: {fileID: 1490354275}
-  - component: {fileID: 1490354280}
   - component: {fileID: 1490354279}
   - component: {fileID: 1490354278}
+  - component: {fileID: 1490354280}
   m_Layer: 5
   m_Name: ShopButton
   m_TagString: Untagged
@@ -6490,7 +6490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1490354280}
         m_TargetAssemblyTypeName: AnimationFix, Assembly-CSharp
         m_MethodName: FixAnimation
         m_Mode: 1
@@ -6546,7 +6546,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e687649defda7f478156a8037a80189, type: 3}
+  m_Sprite: {fileID: -1335983921, guid: 1e687649defda7f478156a8037a80189, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
