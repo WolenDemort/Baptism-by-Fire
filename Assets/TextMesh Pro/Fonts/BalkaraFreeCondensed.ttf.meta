@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e5572fd4541ca24498c526582f42dbe8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Balkara Free Condensed - npoekmu.me
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0f88e55d5a8762f4c8a861d5425da8c0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
