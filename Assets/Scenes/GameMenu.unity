@@ -947,8 +947,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1070290405}
         m_TargetAssemblyTypeName: ButtonControle, Assembly-CSharp
-        m_MethodName: ButtonScensStart
-        m_Mode: 5
+        m_MethodName: ButtonExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
