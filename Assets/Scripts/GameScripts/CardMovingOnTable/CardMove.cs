@@ -1,20 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CardMove : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    public  bool IsDraggable;
+    public  bool IsDraggable=true;
     public Image img;
-  
+
+    Transform trans;
+    private Vector3 offset;
+
    [HideInInspector] public RectTransform parentAfterDrag;
     [HideInInspector] public RectTransform parentDrag;
     private RectTransform rect;
+
+ 
+
     void Start() {
 
-        rect = GetComponent<RectTransform>();    
+        rect = GetComponent<RectTransform>();
+        trans = GetComponent<Transform>();
     }
     
     public void OnBeginDrag(PointerEventData eventData)
@@ -22,9 +28,12 @@ public class CardMove : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDrag
 
         if (!IsDraggable)
             return;
+        Vector3 tr = new Vector3(Input.mousePosition.x, Input.mousePosition.y, trans.position.z);
+        offset = trans.position - Camera.main.ScreenToWorldPoint(tr);
 
         parentAfterDrag = (RectTransform)transform.parent;
        IsDraggable = parentAfterDrag.GetComponent<CardZoneOnTable>().Type == ZoneCardEnums.MyHand; 
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -34,9 +43,19 @@ public class CardMove : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDrag
       
         rect.SetParent(transform.root);
         rect.SetAsLastSibling();
-        img.raycastTarget = false;      
+        img.raycastTarget = false;
 
-        rect.anchoredPosition+= eventData.delta;    
+
+      
+       Vector3 tr = new Vector3(Input.mousePosition.x, Input.mousePosition.y,trans.position.z);
+        trans.position = Camera.main.ScreenToWorldPoint(tr)+offset;
+
+
+      
+
+
+
+
     }
 
 
