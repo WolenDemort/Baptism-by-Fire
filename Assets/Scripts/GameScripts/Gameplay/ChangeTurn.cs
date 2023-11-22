@@ -5,8 +5,9 @@ using UnityEngine;
 public class ChangeTurn : MonoBehaviour
 {
     
-    public void ChangeMove(CardMove cardMove)
-    {
+    public void ChangeMove(CardController cardMove)
+    {    
+
         Debug.Log("Smena Vlasti");
     }
 

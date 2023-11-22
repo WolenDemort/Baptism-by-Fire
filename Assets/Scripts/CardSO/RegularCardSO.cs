@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "Card/Regular card", fileName = "Regular card")]
-public class RegularCard : CardSO//обычные карты для игры
+public class RegularCardSO : CardSO//обычные карты для игры
 {
         
 

@@ -3,13 +3,18 @@ using UnityEngine.UI;
 
 public class AutoSpasing : MonoBehaviour
 {
-    public float desiredSpacing = 10f; // Желаемое расстояние между объектами
+    
+    public float maxParentWidth ; // Максимальная ширина родительского объекта
 
     // Вызывается в редакторе Unity и при изменении дочерних объектов
-    void OnValidate()
-    {
-        UpdateSpacing();
-    }
+    //void OnValidate()
+    //{
+    //    UpdateSpacing();
+
+    //    RectTransform rectTransform = GetComponent<RectTransform>();
+    //    maxParentWidth = rectTransform.rect.width;
+        
+    //}
 
     // Вызывается в редакторе Unity и при изменении дочерних объектов
     void OnTransformChildrenChanged()
@@ -20,32 +25,33 @@ public class AutoSpasing : MonoBehaviour
     // Обновляет расстояние между объектами в зависимости от их количества
     void UpdateSpacing()
     {
-        HorizontalLayoutGroup layoutGroup = GetComponent<HorizontalLayoutGroup>();
+        int childCount = transform.childCount;
 
-        if (layoutGroup != null)
+        if (childCount > 1)
         {
-            int childCount = transform.childCount;
+            HorizontalLayoutGroup layoutGroup = GetComponent<HorizontalLayoutGroup>();
 
-            // Создаем временный контейнер и устанавливаем его в качестве родителя для дочерних объектов
-            GameObject container = new GameObject("Container");
-            container.transform.SetParent(transform);
-
-            // Устанавливаем LayoutElement для контейнера, чтобы он управлял шириной
-            LayoutElement containerLayoutElement = container.AddComponent<LayoutElement>();
-            containerLayoutElement.ignoreLayout = true;
-
-            // Устанавливаем размеры контейнера так, чтобы все объекты влезли с учетом желаемого расстояния
-            float containerWidth = (desiredSpacing + layoutGroup.preferredWidth) * childCount - desiredSpacing;
-            containerLayoutElement.preferredWidth = containerWidth;
-
-            // Устанавливаем расстояние в компоненте HorizontalLayoutGroup
-            layoutGroup.spacing = desiredSpacing;
-
-            // Перемещаем дочерние объекты в контейнер
-            for (int i = 0; i < childCount; i++)
+            if (layoutGroup != null)
             {
-                transform.GetChild(i).SetParent(container.transform, false);
+                // Получаем ширину первого дочернего объекта (предполагается, что все объекты имеют одинаковую ширину)
+                RectTransform firstChild = transform.GetChild(0).GetComponent<RectTransform>();
+                float childWidth = firstChild.rect.width;
+
+                // Рассчитываем доступную ширину для дочерних объектов
+                float availableWidth = maxParentWidth;
+
+                // Рассчитываем новое значение spacing (может быть отрицательным)
+                float newSpacing = (availableWidth - childWidth) / (childCount);
+
+                // Устанавливаем новое значение spacing (отрицательное)
+                layoutGroup.spacing = newSpacing;
             }
         }
     }
 }
+
+
+    
+   
+
+   

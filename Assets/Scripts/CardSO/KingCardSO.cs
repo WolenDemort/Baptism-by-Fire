@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [ CreateAssetMenu(menuName = "Card/King card", fileName = "King card")]
-public class KingCard : CardSO//карты королей
+public class KingCardSO : CardSO//карты королей
 {
    
 

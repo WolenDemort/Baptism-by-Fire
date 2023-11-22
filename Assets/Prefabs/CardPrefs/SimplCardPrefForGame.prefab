@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3736610598182311109}
-  - component: {fileID: 6288435136900788312}
+  - component: {fileID: 8811263527257500007}
   m_Layer: 5
   m_Name: SimplCardPrefForGame
   m_TagString: Untagged
@@ -115,7 +115,7 @@ RectTransform:
   m_AnchoredPosition: {x: 248, y: 0}
   m_SizeDelta: {x: 400, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6288435136900788312
+--- !u!114 &8811263527257500007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,12 +124,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1057075404065960474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67c14f47007e8b845b9eeaed40f453a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ac27ab1094275499a96a76d54f3a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDraggable: 1
   img: {fileID: 1851273073418332407}
-  parentAfterDrag1: {fileID: 0}
-  MainCamera: {fileID: 0}
+  parentAfterDrag: {fileID: 0}
+  parentDrag: {fileID: 0}
 --- !u!1 &1239952427556471939
 GameObject:
   m_ObjectHideFlags: 0
