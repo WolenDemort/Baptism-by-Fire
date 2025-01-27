@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f48ff4411668554aa4575b549fd02fd, type: 3}
+  m_Name: FightSound
+  m_EditorClassIdentifier: 
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: 48439b7776175f540bf2c423b0511fda, type: 3}
+    privateVolume: 0.5
+  - audioClip: {fileID: 8300000, guid: f76d7631c8311144fa68f298024c3ae6, type: 3}
+    privateVolume: 0.7
+  - audioClip: {fileID: 8300000, guid: 968275995a99fc34983fc837e08135d7, type: 3}
+    privateVolume: 0.6
+  - audioClip: {fileID: 8300000, guid: 041ec08192649d54897ae966d7a8f315, type: 3}
+    privateVolume: 0.2
+  - audioClip: {fileID: 8300000, guid: 528a48de38ab7034ba30d17e4d914098, type: 3}
+    privateVolume: 0.35

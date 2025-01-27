@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonControle : MonoBehaviour
+public class ButtonControl : MonoBehaviour
 {
+   
     public void ButtonScensStart(string sceneName)//метод для запуска любой сцены на выбор
     {
         SceneManager.LoadScene(sceneName);//запуск сцены по ее имени
@@ -32,5 +34,7 @@ public class ButtonControle : MonoBehaviour
 
     }
 
+   
+  
    
 }

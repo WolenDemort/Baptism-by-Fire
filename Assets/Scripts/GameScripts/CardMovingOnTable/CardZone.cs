@@ -10,8 +10,8 @@ public class CardZone : MonoBehaviour, IDropHandler
     {
         if (!eventData.pointerDrag.TryGetComponent(out CardController card)) return;
 
-        if (ZoneType == ZoneCardEnums.EnemyArrows || ZoneType == ZoneCardEnums.EnemyCatapults || ZoneType == ZoneCardEnums.EnemySwordsmens || !card.IsDraggable)
-            return;
+      if (ZoneType == ZoneCardEnums.EnemyArrows || ZoneType == ZoneCardEnums.EnemyCatapults || ZoneType == ZoneCardEnums.EnemySwordsmens || !card.IsDraggable)
+          return;
 
 
         card.transform.SetParent(this.transform);

@@ -9,7 +9,8 @@ public class CardSO : ScriptableObject
     public string storyCard;//описание
 
     public AudioClip [] audioCard;//аудио эффект при использовании
-   
+    public AudioClip[] audioMesseg;//фразы персонажа
+
     public CurrencyType CurrencyType;//выбор валюты
     [SerializeField]
     private int coastCard;//цена покупки
@@ -19,6 +20,6 @@ public class CardSO : ScriptableObject
    
     public int countCard;//количество
     public ChoosingFaith ChoosingFaith;// вера(фракция)
-
+   
 
 }

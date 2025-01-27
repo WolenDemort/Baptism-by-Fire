@@ -5,51 +5,46 @@ using UnityEngine;
 public class SoundManeger : MonoBehaviour
 {
     [SerializeField]
-   private AudioSource audioSource;
+    private AudioSource audioSource;
     [SerializeField]
-    private AudioClip[] audioClips;
-    [SerializeField]
-    private float totalVolume;
-    [SerializeField]
-    private float privateVolume;
+    private SoundSO audioClips;
+
 
     private bool isPaused = false;
-    
+
 
     void Start()
-    {      
-        PlayBackgroundSound();        
+    {
+    PlayBackgroundSound();
     }
-  
+
 
     void FixedUpdate()
     {
-        if (!audioSource.isPlaying && !isPaused) 
+        if (!audioSource.isPlaying && !isPaused)
         {
             PlayBackgroundSound();
         }
     }
     void PlayBackgroundSound()
     {
-        audioSource.clip = audioClips[ Random.Range(0, audioClips.Length)];
 
-        if (audioSource.clip.name == "SoundText1" || audioSource.clip.name == "SoundText2")
-             audioSource.volume = privateVolume;       
-        else audioSource.volume = totalVolume;
-
-           audioSource.Play();
+        int rand = Random.Range(0, audioClips.AudioSource.Length);
+        audioSource.clip = audioClips.AudioSource[rand].audioClip;
+        audioSource.volume = audioClips.AudioSource[rand].privateVolume;
+        audioSource.Play();
 
     }
 
     void OnApplicationPause(bool pauseStatus)
     {
         if (pauseStatus)
-        {            
+        {
             isPaused = true;
             audioSource.Pause();
         }
-       if(!pauseStatus)
-        {           
+        if (!pauseStatus)
+        {
             isPaused = false;
             audioSource.UnPause();
         }
