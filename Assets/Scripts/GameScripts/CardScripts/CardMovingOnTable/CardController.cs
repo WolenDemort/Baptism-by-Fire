@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    public  bool IsDraggable=true;
+    public bool IsDraggable=true;
     public Image img;
 
  

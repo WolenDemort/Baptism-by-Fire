@@ -3,23 +3,45 @@ using UnityEngine;
 public class CardSO : ScriptableObject
 {
 
-    public int idCard;//id карты 
-    public string nameCard;//имя карты
-    public Sprite imgCard;//спрайт карты
-    public string storyCard;//описание
+    [SerializeField] private int idCard;//id карты 
+    [SerializeField] private string nameCard;//имя карты
+    [SerializeField] private Sprite imgCard;//спрайт карты
+    [SerializeField] private string storyCard;//описание
 
-    public AudioClip [] audioCard;//аудио эффект при использовании
-    public AudioClip[] audioMesseg;//фразы персонажа
+    [SerializeField] private AudioClip [] audioCard;//аудио эффект при использовании
+    [SerializeField] private AudioClip[] audioMesseg;//фразы персонажа
 
-    public CurrencyType CurrencyType;//выбор валюты
+    [SerializeField] private CurrencyType currencyType;//выбор валюты
     [SerializeField]
     private int coastCard;//цена покупки
             
-    [SerializeField]
-    private int scoreCard;//очки карты
    
-    public int countCard;//количество
-    public ChoosingFaith ChoosingFaith;// вера(фракция)
+
+    [SerializeField] private int countCard;//количество
+    [SerializeField] private ChoosingFaith choosingFaith;// вера(фракция)
+
+
+
+
+    public int getIdCards =>idCard;
+    public string getNameCard => nameCard;
+    public Sprite getImgCard => imgCard;
+    public string getStoryCard=> storyCard;
+    public AudioClip[] getAudioCard => audioCard;
+    public AudioClip[] getAudioMessege => audioMesseg;
+    public CurrencyType getCurrency => currencyType;
+    public int getCoast => coastCard;
    
+    public int getCountCard => countCard;
+    public ChoosingFaith getFaith => choosingFaith;
+
+
+
+
+
+
+
+
+
 
 }
