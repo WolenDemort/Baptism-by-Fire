@@ -6,7 +6,7 @@ public class SpellCardSO : CardSO//карты способностей
 {
     
 
-    public SpellsChosee spellRegular;//выбор спосбности
+   // public SpellsChosee spellRegular;//выбор спосбности
 
    
 }

@@ -2,5 +2,5 @@
 
 public enum CurrencyType 
 {
-    Silver_Ñoin, Goold_coin
+    Silver_Ñoin, Gold_coin
 }

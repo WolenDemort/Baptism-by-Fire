@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c93815dd7b5200a4c973e9c348e5cc6b, type: 3}
+  m_Name: Deck factory
+  m_EditorClassIdentifier: 
+  _regularCardPref: {fileID: 3997349721665945999, guid: 56fddf272efc9794f88665b88bdf2b91, type: 3}
+  _spellCardPref: {fileID: 1742271394562387135, guid: aa8e609bacfff6844a3a68e0e951f95f, type: 3}

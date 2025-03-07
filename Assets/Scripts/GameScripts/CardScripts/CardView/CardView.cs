@@ -10,7 +10,14 @@ public class CardView : MonoBehaviour
     [SerializeField]
     protected Image spellImage;//изображение способности
 
+    protected SpellsChosee spells;
+    public CardSO cardData { get; private set; }
 
+    public virtual void Initialize(CardSO card)
+    {
+        cardData=card;
+        imgCard.sprite = cardData.getImgCard;
+       spells= cardData.getSpells;
+    }
 
-    
 }

@@ -85,6 +85,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3736610598182311109}
   - component: {fileID: 8811263527257500007}
+  - component: {fileID: 3997349721665945999}
+  - component: {fileID: 1725309239614781677}
   m_Layer: 5
   m_Name: NewSimpleCard
   m_TagString: Untagged
@@ -130,6 +132,34 @@ MonoBehaviour:
   IsDraggable: 1
   img: {fileID: 1851273073418332407}
   parentAfterDrag: {fileID: 0}
+--- !u!114 &3997349721665945999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057075404065960474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6eb01f92f14408dd0ea8d2630efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgCard: {fileID: 1851273073418332407}
+  spellImage: {fileID: 5732586721649826887}
+  CardScore: {fileID: 6163385443210860999}
+  lineImage: {fileID: 5665777334518799395}
+--- !u!114 &1725309239614781677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057075404065960474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb83be943741e94cbf28c1707842067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1239952427556471939
 GameObject:
   m_ObjectHideFlags: 0

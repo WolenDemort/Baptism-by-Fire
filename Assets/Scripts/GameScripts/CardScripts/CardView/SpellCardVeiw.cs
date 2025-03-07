@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpellCardVeiw : CardView
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+       [SerializeField]
+    private Image lineImage; //изображение линии
+    
 
-    // Update is called once per frame
-    void Update()
+    public SpellCardSO spellCardData { get; private set; }
+
+
+
+    public virtual void Initialize(SpellCardSO cardSO) 
     {
-        
+        if (!(cardSO is SpellCardSO))
+        {
+            throw new System.ArgumentException("Не SpellCardSO");
+        }
+        spellCardData = cardSO as SpellCardSO;
+        imgCard.sprite = spellCardData.getImgCard;
+        spells = cardData.getSpells;
     }
 }

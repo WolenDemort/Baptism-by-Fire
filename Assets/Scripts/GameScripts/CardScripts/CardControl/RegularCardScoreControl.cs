@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegularCardControl : MonoBehaviour
+public class RegularCardScoreControl : MonoBehaviour
 {
 
     private int originalScore; //изначальный счет

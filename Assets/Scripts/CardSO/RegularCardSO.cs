@@ -4,11 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Card/Regular card", fileName = "Regular card")]
 public class RegularCardSO : CardSO//обычные карты для игры
 {
-    [SerializeField] private SpellsChosee spellRegular;//способность
+   // [SerializeField] private SpellsChosee spellRegular;//способность
 
     [SerializeField] private CardLine line;
 
-    [SerializeField] private bool HeroCard;//явлется ли карта героем(действуют ли на нее баффы)
+    [SerializeField] private bool HeroCard= false;//явлется ли карта героем(действуют ли на нее баффы)
 
 
     [SerializeField] private int scoreCard;//очки карты
@@ -16,7 +16,7 @@ public class RegularCardSO : CardSO//обычные карты для игры
 
   
 
-    public SpellsChosee getSpells => spellRegular;
+  //  public SpellsChosee getSpells => spellRegular;
     public CardLine getLine => line;
     public bool getHero => HeroCard;
 
