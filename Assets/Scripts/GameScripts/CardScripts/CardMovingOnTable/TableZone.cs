@@ -6,9 +6,22 @@ using UnityEngine.Events;
 public class TableZone : MonoBehaviour
 {
    public  UnityEvent<CardController> OnCardDroped;
-   public void DropCardOnZone(CardController card) { card.IsDraggable = false; Debug.Log("is false"); OnCardDroped.Invoke(card);  }
+   
+   public void DropCardOnZone(CardController card) {
 
-  // public void TakeCardFromZone(CardController card, CardZone zone) { }
+        if (!(card.transform.parent.name=="MyHand"))
+        {
+            card.IsDraggable = false;
+
+        }
+       
+        Debug.Log("is false");
+        OnCardDroped.Invoke(card);
+       
+        
+   }
+
+  
      
    
 }

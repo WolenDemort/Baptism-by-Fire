@@ -13,36 +13,28 @@ public class RegularCardScoreControl : MonoBehaviour
     void Awake()
     {
         card = GetComponent<RegularCardView>();
-       
+        
     }
 
     void Start()
     {
-        originalScore = card.getOriginalScore;
-       
-
-
+        originalScore = card.OriginalScore;
+        currentScore = originalScore;
     }
 
     public void setOriginalScore() //установка изначального счета
     {
         currentScore = originalScore;
-        card.DrawNewScore(currentScore);
+       
     }
 
-    public void DoubleScore() //увеличение счета в два раза
+    public void setBuffScore()
     {
-        currentScore = card.getCurrentScore;
         currentScore *= 2;
-        card.DrawNewScore(currentScore);
+        card.UpdateScoreView(currentScore);
+
     }
 
-    public void HalfScore() //деление счета 
-    {
-        currentScore = card.getCurrentScore;
-        currentScore /= 2;
-        card.DrawNewScore(currentScore);
-    }
-
-    
+    public int CurrentScore => currentScore;//передача текущего 
+    public int OriginalScore => originalScore;//передача оригинального счета
 }

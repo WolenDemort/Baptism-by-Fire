@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,6 +9,10 @@ public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
     public bool IsDraggable=true;
     public Image img;
 
+
+    //Dictionary <key="Тип способности", значение = "сама функция способности/ивет для вызова"> spellAction
+    //
+        
  
     private Vector3 offset;
       
@@ -31,7 +36,7 @@ public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
         Vector3 tr = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
         offset = transform.position - Camera.main.ScreenToWorldPoint(tr);
 
-        parentAfterDrag = (RectTransform)base.transform.parent;
+        parentAfterDrag = (RectTransform)transform.parent;
      
     }
 
@@ -47,14 +52,26 @@ public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
         transform.position = Camera.main.ScreenToWorldPoint(tr)+offset;    
 
     }
-
+    
 
     public void OnEndDrag(PointerEventData eventData)
     {       
         if (!IsDraggable)    
             return;
+
+
         
         rect.SetParent(parentAfterDrag);
         img.raycastTarget = true;      
     }
+
+
+    /*
+     public void chekSpell(){
+    сделать сами методы , чтобы проверяли выполнения условия 
+    применение выше по логическому уровню. здесь только проверка может ли оно сработать и вызов
+    }
+
+     
+     */
 }

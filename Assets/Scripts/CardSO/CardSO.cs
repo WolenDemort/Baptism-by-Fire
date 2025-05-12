@@ -6,6 +6,7 @@ public class CardSO : ScriptableObject
     [SerializeField] private int idCard;//id карты 
     [SerializeField] private string nameCard;//имя карты
     [SerializeField] private Sprite imgCard;//спрайт карты
+    
     [TextArea(3, 10)]
     [SerializeField] private string storyCard;//описание
 
@@ -19,8 +20,12 @@ public class CardSO : ScriptableObject
     [SerializeField] private ChoosingFaith choosingFaith;// вера(фракция)
 
     [SerializeField] private SpellsChosee spellRegular;//способность
+    [SerializeField] private Sprite spellSprite;// спрайт способности
+    [SerializeField] private ZoneCardEnums ZoneLine;
 
+  
 
+    public ZoneCardEnums getZoneLine => ZoneLine;
     public int getIdCards =>idCard;
     public string getNameCard => nameCard;
     public Sprite getImgCard => imgCard;
@@ -31,7 +36,7 @@ public class CardSO : ScriptableObject
     public int getCoast => coastCard;   
     public int getCountCard => countCard;
     public ChoosingFaith getFaith => choosingFaith;
-
+    public Sprite getImgSpell => spellSprite;
     public SpellsChosee getSpells => spellRegular;
 
 

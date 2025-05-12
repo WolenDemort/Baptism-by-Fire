@@ -9,15 +9,22 @@ public class CardView : MonoBehaviour
     protected Image imgCard; //изображение карты
     [SerializeField]
     protected Image spellImage;//изображение способности
-
-    protected SpellsChosee spells;
+    protected Dictionary<SpellsChosee, Sprite> spellIcon;
+    protected ZoneCardEnums zone;
+    protected SpellsChosee spell;
     public CardSO cardData { get; private set; }
 
     public virtual void Initialize(CardSO card)
     {
+       
         cardData=card;
         imgCard.sprite = cardData.getImgCard;
-       spells= cardData.getSpells;
+        spell= cardData.getSpells;
+        if (spell != SpellsChosee.None)
+        {
+            spellImage.sprite = cardData.getImgSpell;
+        }
+        zone = cardData.getZoneLine;
     }
-
+    public ZoneCardEnums getCardZone => zone;
 }

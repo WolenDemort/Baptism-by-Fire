@@ -24,3 +24,5 @@ MonoBehaviour:
   countCard: 3
   choosingFaith: 2
   spellRegular: 4
+  spellSprite: {fileID: 6991849013916550155, guid: 1c4fb025e60110643ab47e6236eda1b7, type: 3}
+  ZoneLine: 84

@@ -19,7 +19,7 @@ public class Deck : MonoBehaviour
 
     public void SpawnCard()
     {
-        _deckPanel.SpawnCard(_playingDeck.AllDeck.Cast<CardSO>());
+        _deckPanel.SetAllCardsInPlayingDeck(_playingDeck.AllCards.Cast<CardSO>());
        
     }
 }

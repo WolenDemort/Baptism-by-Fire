@@ -1,19 +1,8 @@
 using UnityEngine;
 
-[ CreateAssetMenu(menuName = "Card/King card", fileName = "King card")]
+[ CreateAssetMenu(menuName = "Card/Create Card/King card", fileName = "King card")]
 public class KingCardSO : CardSO//карты королей
 {
-   
-
-      
-
-        public SpellsChosee spellRegular;//способность
-
-
-   
-    //public ChoosingFaith ChoosingFaith;// вера(фракция)
-
-
-
+ //public ChoosingFaith ChoosingFaith;// вера(фракция)
 
 }

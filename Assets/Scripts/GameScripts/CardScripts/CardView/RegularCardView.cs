@@ -6,21 +6,21 @@ using UnityEngine.UI;
 
 public class RegularCardView : CardView
 {
- 
 
-  
     [SerializeField]
     private TMP_Text CardScore; //поле очков карты
-    private int originalScore=4; //изначальный счет
-    private int currentScore; //текущий счет
+    private int originalScore; //изначальный счет
+ 
     [SerializeField]
     private Image lineImage; //изображение линии
-   
+    
+    
+
     public  RegularCardSO regularCardData { get; private set; }
 
 
 
-    public virtual void Initialize(RegularCardSO cardSO) //первичная установка данных
+    public override void Initialize(CardSO cardSO) //первичная установка данных
     {
         if (!(cardSO is RegularCardSO))
         {
@@ -29,26 +29,30 @@ public class RegularCardView : CardView
         regularCardData = cardSO as RegularCardSO;
 
         imgCard.sprite = regularCardData.getImgCard;
+       
         originalScore = regularCardData.getScoreCard;
-        spells = regularCardData.getSpells;
-        if (spells == SpellsChosee.None) DownSpellImg();
+        zone = regularCardData.getZoneLine;
         
-        DrawNewScore(originalScore);
+       spell = regularCardData.getSpells;
+        if (spell != SpellsChosee.None)
+        {
+            spellImage.sprite = regularCardData.getImgSpell;
+        }
+        else
+        {
+            spellImage.enabled = false;
+        }
+
+
+        UpdateScoreView(originalScore);
     }
+
+    public void UpdateScoreView(int score)
+    {
+        CardScore.text = score.ToString();
+    }
+
+    public int OriginalScore => originalScore;//передача оригинального счета
 
    
-    public void DrawNewScore(int score)
-    {
-        currentScore = score;
-        CardScore.text = currentScore.ToString();
-    }
-
-    public void DownSpellImg()
-    {
-        Transform parent = spellImage.transform.parent;
-        parent.GetComponent<GameObject>().SetActive(false);
-    }
-
-    public int getCurrentScore => currentScore;//передача текущего 
-    public int getOriginalScore => originalScore;//передача оригинального счета
 }

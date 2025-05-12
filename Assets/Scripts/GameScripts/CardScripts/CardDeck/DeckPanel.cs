@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class DeckPanel : MonoBehaviour
 {
-    private List<CardView> _deck = new List<CardView>();
+    private List<CardView> _deck = new List<CardView>();//текущая колода на руках
    
 
-    List<CardSO> allCards;
-    List<CardSO> remainingСards;
+    List<CardSO> allCards;//все игровые карты 
+    List<CardSO> remainingСards; //оставшиеся карты из колоды
 
 
     [SerializeField]
@@ -19,17 +19,16 @@ public class DeckPanel : MonoBehaviour
     [SerializeField]
     private int _countCardInArm;
 
-    public void SpawnCard(IEnumerable<CardSO> cards)
+    public void SetAllCardsInPlayingDeck(IEnumerable<CardSO> cards)
     {
         allCards = cards.ToList();
-        StartingHandd();
+        StartingHand();
     }
 
 
-    public void Spawn(List<CardSO> cards)
+    public void Spawn(List<CardSO> cards) //спавн карт
     {
-        // Clear();
-
+        
         // Выводим результат
         foreach (CardSO card in cards)
         {
@@ -39,19 +38,40 @@ public class DeckPanel : MonoBehaviour
 
     }
 
-    public void StartingHandd()
-    {
-       
-        remainingСards = Shuffle(allCards);         
+    public void StartingHand() //начальная игровая рука 
+    {       
+        remainingСards = Shuffle(allCards); 
+        
         List<CardSO> randomCards = remainingСards.Take(_countCardInArm).ToList();
-        Spawn(randomCards);
-        remainingСards = ListCUt(remainingСards, randomCards);
-        foreach (CardSO card in remainingСards)
-        {
-            Debug.Log(card.getNameCard);
-        }
 
+        Spawn(randomCards);
+
+        remainingСards = ListCut(remainingСards, randomCards);
+       
     }
+
+
+    public void AddCardInArm(int countAddCart) // добавление карты в руку и количество карт
+    {
+        if (remainingСards.Count != 0)
+        {
+            if (countAddCart > remainingСards.Count)
+            {
+                countAddCart = remainingСards.Count;
+            }
+
+            List<CardSO> addCards = remainingСards.Take(countAddCart).ToList();
+            Spawn(addCards);
+
+            remainingСards = ListCut(remainingСards, addCards);
+           
+        }
+        else
+        {
+            Debug.Log("Колода пустая");
+        }
+    }
+
 
    
     private List<CardSO> Shuffle(List<CardSO> cards)
@@ -68,7 +88,7 @@ public class DeckPanel : MonoBehaviour
         return cards;
     }
 
-    public List<CardSO> ListCUt(List<CardSO> list1, List<CardSO> list2) //убрать из одного списка другой
+    public List<CardSO> ListCut(List<CardSO> list1, List<CardSO> list2) //убрать из одного списка другой
     {
         // Группируем элементы второго списка по количеству вхождений
         var counts = list2.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
@@ -76,13 +96,14 @@ public class DeckPanel : MonoBehaviour
         return list1.GroupBy(x => x).SelectMany(g => g.Take(g.Count() - (counts.ContainsKey(g.Key) ? counts[g.Key] : 0))).ToList();
     }
 
+
+
     public void Clear()
     {
         foreach (CardView item in _deck)
         {
            // item.Click -= OnItemViewClick; напоминание отписываться от ивентов
             Destroy(item.gameObject);
-
         }
         _deck.Clear();
     }

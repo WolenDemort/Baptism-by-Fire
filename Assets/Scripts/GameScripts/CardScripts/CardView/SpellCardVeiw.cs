@@ -6,15 +6,13 @@ using UnityEngine.UI;
 
 public class SpellCardVeiw : CardView
 {
-       [SerializeField]
-    private Image lineImage; //изображение линии
+       
     
-
     public SpellCardSO spellCardData { get; private set; }
 
 
 
-    public virtual void Initialize(SpellCardSO cardSO) 
+    public override void Initialize(CardSO cardSO) 
     {
         if (!(cardSO is SpellCardSO))
         {
@@ -22,6 +20,10 @@ public class SpellCardVeiw : CardView
         }
         spellCardData = cardSO as SpellCardSO;
         imgCard.sprite = spellCardData.getImgCard;
-        spells = cardData.getSpells;
+        zone = spellCardData.getZoneLine;
+        spell = spellCardData.getSpells;
+        spellImage.sprite = spellCardData.getImgSpell;
+       
     }
+   
 }

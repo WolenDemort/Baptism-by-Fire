@@ -38,7 +38,8 @@ MonoBehaviour:
   coastCard: 500
   countCard: 1
   choosingFaith: 1
-  spellRegular: 1
-  line: 4
+  spellRegular: 32
+  spellSprite: {fileID: 3408231588634411040, guid: 02f742bd105ab3a4981b112b6bc0d314, type: 3}
+  ZoneLine: 8190
   HeroCard: 0
-  scoreCard: 4
+  scoreCard: 2

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-
-[CreateAssetMenu(menuName = "Card/Deck Factory", fileName = "Deck factory")]
+[CreateAssetMenu(menuName = "Card/Deck/Deck Factory", fileName = "Deck factory")]
 public class DeckFactory : ScriptableObject
 {
     [SerializeField] private CardView _regularCardPref;
@@ -22,11 +22,13 @@ public class DeckFactory : ScriptableObject
             case SpellCardSO:
                 instance = Instantiate(_spellCardPref, parent);
                 break;
-                      
+
             default:
                 throw new System.Exception("Нет такого типа для магазина");
         }
+
         instance.Initialize(deckItem);
         return instance;
     }
+
 }
