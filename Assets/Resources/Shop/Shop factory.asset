@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec2b1251955f1e419309c20c87f64b1, type: 3}
+  m_Name: Shop factory
+  m_EditorClassIdentifier: 
+  _simpleCarShopPref: {fileID: 5659713235953502702, guid: 0ff75a2655a89b841a4ec2d092365c0a, type: 3}
+  _spellCarShopdPref: {fileID: 4295256611466427794, guid: 6b14717fb75b5d744b2bf5f7f4e8fa69, type: 3}
+  _kingCardShopPref: {fileID: 6883069300195208408, guid: e79b34451a0c5d8458724829b7b2dd36, type: 3}
+  gold: {fileID: -5275974221471470513, guid: aa7acc08e824e1c4e83fcd9270fde526, type: 3}
+  silver: {fileID: 7081527322082503550, guid: 1fc82153e9219cb47aec192eb0e97629, type: 3}

@@ -1,3 +1,4 @@
+using SimplePrefs;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,9 +22,9 @@ public class ButtonControl : MonoBehaviour
     public void ScrollReturnOnHorizontal(GameObject gameObject)
     {
         ScrollRect _scroll = gameObject.GetComponent<ScrollRect>();
-     
+
         _scroll.horizontalNormalizedPosition = 0;
-      
+
     }
 
     public void ScrollReturnOnVertical(GameObject gameObject)
@@ -35,6 +36,6 @@ public class ButtonControl : MonoBehaviour
     }
 
    
-  
-   
+
+
 }

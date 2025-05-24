@@ -1,6 +1,7 @@
+using Newtonsoft.Json;
 using UnityEngine;
 
-
+[System.Serializable]
 [CreateAssetMenu(menuName = "Card/Create Card/Regular card", fileName = "Regular card")]
 public class RegularCardSO : CardSO//обычные карты для игры
 {

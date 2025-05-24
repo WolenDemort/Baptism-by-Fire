@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee7aa5c5cf1ff44986dba95ae088578, type: 3}
+  m_Name: Shop Content
+  m_EditorClassIdentifier: 
+  <regularCards>k__BackingField:
+  - {fileID: 11400000, guid: 3b8dd0aa727b7a3419c460966bf0642e, type: 2}
+  - {fileID: 11400000, guid: a97a5589313fd474f8411f0e42308ba5, type: 2}
+  - {fileID: 11400000, guid: 3d7b4b55cb5464d4e9d5a9776fcd33c2, type: 2}
+  - {fileID: 11400000, guid: e9660c4e3c39ace4aaf9749571fb3f2e, type: 2}
+  - {fileID: 11400000, guid: c80eac23c7687fa46a282cb85e40d6f4, type: 2}
+  - {fileID: 11400000, guid: 18e4ade19ad62f14f841b67cdb135890, type: 2}
+  - {fileID: 11400000, guid: 7dc659fa80254364680f8544120ee0ad, type: 2}
+  - {fileID: 11400000, guid: 65d5bd7f63d3e774192fb9a1e57f8ac0, type: 2}
+  <spellCards>k__BackingField:
+  - {fileID: 11400000, guid: 0bd4cceabe5c915428d44ddcc446f882, type: 2}
+  - {fileID: 11400000, guid: 0184866cb601490478d30fc86edbc5ca, type: 2}
+  <kingCards>k__BackingField:
+  - {fileID: 11400000, guid: 9c5e35f3a8ca98a46ada463aed826e05, type: 2}
+  - {fileID: 11400000, guid: 720bb061993e0874ab3a6cb4521322b3, type: 2}

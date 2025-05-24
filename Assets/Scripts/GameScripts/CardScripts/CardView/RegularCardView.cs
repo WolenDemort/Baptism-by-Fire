@@ -9,16 +9,13 @@ public class RegularCardView : CardView
 
     [SerializeField]
     private TMP_Text CardScore; //поле очков карты
-    private int originalScore; //изначальный счет
- 
+    private int originalScore; //изначальный счет 
     [SerializeField]
     private Image lineImage; //изображение линии
     
     
 
     public  RegularCardSO regularCardData { get; private set; }
-
-
 
     public override void Initialize(CardSO cardSO) //первичная установка данных
     {

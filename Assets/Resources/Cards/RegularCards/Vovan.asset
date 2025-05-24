@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb614b643d3815f488ccee649a69d02e, type: 3}
-  m_Name: "\u041B\u0449\u044B\u0441\u0440\u0443\u0448"
+  m_Name: Vovan
   m_EditorClassIdentifier: 
   idCard: 0
-  nameCard: gdfkghkdofg
+  nameCard: "\u0412\u043E\u0432\u0430\u043D"
   imgCard: {fileID: 21300000, guid: 05555e532119f7a439fb89935185d67c, type: 3}
-  storyCard: sdfsadfsa
+  storyCard: vovka
   audioCard: []
   audioMesseg: []
   currencyType: 0
-  coastCard: 0
+  coastCard: 350
   countCard: 1
   choosingFaith: 0
   spellRegular: 4
@@ -27,3 +27,4 @@ MonoBehaviour:
   ZoneLine: -1
   HeroCard: 0
   scoreCard: 15
+  lineSprite: {fileID: 111742383, guid: 45db2b088c0f9534f98fcaa67f3ec565, type: 3}

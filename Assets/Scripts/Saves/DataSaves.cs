@@ -7,7 +7,9 @@ using SimplePrefs;
 public struct DataSaves: IData
 {
     [SaveField]
-   public int goldMoney;
+    public int goldMoney;
     [SaveField]
     public int silverMoney;
+    
+
 }

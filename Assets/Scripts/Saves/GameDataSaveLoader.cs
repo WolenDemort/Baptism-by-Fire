@@ -17,11 +17,11 @@ namespace SimplePrefs
             _dataLoader = loader;
         }
 
-      public void SaveMoney(DataSaves dataSavesMoney)
-        {
+       public void SaveMoney(DataSaves dataSavesMoney)
+       {
             _dataSaver.SaveData(dataSavesMoney);
-
-        }
+ 
+       }
         public DataSaves LoadMoney() {
 
             return _dataLoader.LoadData<DataSaves>();
