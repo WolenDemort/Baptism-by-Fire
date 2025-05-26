@@ -5,12 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SpellCardVeiw : CardView
-{
-       
+{     
     
     public SpellCardSO spellCardData { get; private set; }
-
-
 
     public override void Initialize(CardSO cardSO) 
     {

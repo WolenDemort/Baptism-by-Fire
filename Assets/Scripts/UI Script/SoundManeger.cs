@@ -9,15 +9,12 @@ public class SoundManeger : MonoBehaviour
     [SerializeField]
     private SoundSO audioClips;
 
-
     private bool isPaused = false;
-
 
     void Start()
     {
     PlayBackgroundSound();
     }
-
 
     void FixedUpdate()
     {

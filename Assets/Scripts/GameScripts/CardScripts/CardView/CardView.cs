@@ -6,17 +6,15 @@ public class CardView : MonoBehaviour
 {
 
     [SerializeField]
-    protected Image imgCard; //изображение карты
+    protected Image imgCard; 
     [SerializeField]
-    protected Image spellImage;//изображение способности
-    protected Dictionary<SpellsChosee, Sprite> spellIcon;
+    protected Image spellImage;  
     protected ZoneCardEnums zone;
     protected SpellsChosee spell;
     public CardSO cardData { get; private set; }
 
     public virtual void Initialize(CardSO card)
-    {
-       
+    {       
         cardData=card;
         imgCard.sprite = cardData.getImgCard;
         spell= cardData.getSpells;

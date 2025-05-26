@@ -17,7 +17,7 @@ public class RegularCardView : CardView
 
     public  RegularCardSO regularCardData { get; private set; }
 
-    public override void Initialize(CardSO cardSO) //первичная установка данных
+    public override void Initialize(CardSO cardSO) 
     {
         if (!(cardSO is RegularCardSO))
         {
@@ -25,21 +25,16 @@ public class RegularCardView : CardView
         }
         regularCardData = cardSO as RegularCardSO;
 
-        imgCard.sprite = regularCardData.getImgCard;
-       
+        imgCard.sprite = regularCardData.getImgCard;       
         originalScore = regularCardData.getScoreCard;
-        zone = regularCardData.getZoneLine;
-        
-       spell = regularCardData.getSpells;
+        zone = regularCardData.getZoneLine;        
+        spell = regularCardData.getSpells;
         if (spell != SpellsChosee.None)
         {
             spellImage.sprite = regularCardData.getImgSpell;
         }
         else
-        {
-            spellImage.enabled = false;
-        }
-
+        { spellImage.enabled = false;}
 
         UpdateScoreView(originalScore);
     }
