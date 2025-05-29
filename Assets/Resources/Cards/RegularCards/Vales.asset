@@ -41,6 +41,7 @@ MonoBehaviour:
   choosingFaith: 2
   spellRegular: 64
   spellSprite: {fileID: -9148348609924905823, guid: 66c43e2cfbaebae46bced6cce2f5472b, type: 3}
-  ZoneLine: 8190
+  ZoneLine: 160
   HeroCard: 0
   scoreCard: 5
+  lineSprite: {fileID: 0}

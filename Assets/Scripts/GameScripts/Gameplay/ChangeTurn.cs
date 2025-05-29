@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ChangeTurn : MonoBehaviour
 {
-    
-    public void ChangeMove(CardController cardMove)
-    {    
+    [SerializeField]EnemyControl enemy;
 
-        Debug.Log("Smena Vlasti");
+    public void ChangeMove(CardController cardMove)
+    {
+        
+        enemy.Turn();
     }
 
 

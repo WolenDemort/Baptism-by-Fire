@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-public class SpySpell : CardSpell
+public class SpySpell : MonoBehaviour, ICardSpell
 {
     [Inject] private DeckPanel deckPanel;
     public void Awake()
@@ -10,7 +10,7 @@ public class SpySpell : CardSpell
         DiContainer container = DIManager.GetContainer();
         deckPanel = container.Resolve<DeckPanel>();
     }
-    public override void Spell()
+    public void Spell()
     {
         deckPanel.AddCardInArm(1);
     }

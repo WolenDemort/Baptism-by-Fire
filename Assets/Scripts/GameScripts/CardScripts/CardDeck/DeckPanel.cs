@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class DeckPanel : MonoBehaviour
 {
-    private List<CardView> _deck = new List<CardView>();//òåêóùàÿ êîëîäà íà ğóêàõ
-   
 
-    List<CardSO> allCards;//âñå èãğîâûå êàğòû 
-    List<CardSO> remainingÑards; //îñòàâøèåñÿ êàğòû èç êîëîäû
-
+    Hand hand;
 
     [SerializeField]
     private Transform _armPlayer;
@@ -19,11 +15,13 @@ public class DeckPanel : MonoBehaviour
     [SerializeField]
     private int _countCardInArm;
 
-    public void SetAllCardsInPlayingDeck(IEnumerable<CardSO> cards)
+   
+    public void HandConstructor(Hand h)
     {
-        allCards = cards.ToList();
+        hand = h;
         StartingHand();
     }
+
 
 
     public void Spawn(List<CardSO> cards) //ñïàâí êàğò
@@ -33,37 +31,38 @@ public class DeckPanel : MonoBehaviour
         foreach (CardSO card in cards)
         {
             CardView spawnedCard = deckFactory.Get(card, _armPlayer);
-            _deck.Add(spawnedCard);
+            hand.cardOnHand.Add(spawnedCard);
         }
 
     }
 
     public void StartingHand() //íà÷àëüíàÿ èãğîâàÿ ğóêà 
     {       
-        remainingÑards = Shuffle(allCards); 
         
-        List<CardSO> randomCards = remainingÑards.Take(_countCardInArm).ToList();
+        hand.remainingÑards = Shuffle(hand.Cards.AllCards); 
+        
+        List<CardSO> randomCards = hand.remainingÑards.Take(_countCardInArm).ToList();
 
         Spawn(randomCards);
 
-        remainingÑards = ListCut(remainingÑards, randomCards);
+        hand.remainingÑards = ListCut(hand.remainingÑards, randomCards);
        
     }
 
 
     public void AddCardInArm(int countAddCart) // äîáàâëåíèå êàğòû â ğóêó è êîëè÷åñòâî êàğò
     {
-        if (remainingÑards.Count != 0)
+        if (hand.remainingÑards.Count != 0)
         {
-            if (countAddCart > remainingÑards.Count)
+            if (countAddCart > hand.remainingÑards.Count)
             {
-                countAddCart = remainingÑards.Count;
+                countAddCart = hand.remainingÑards.Count;
             }
 
-            List<CardSO> addCards = remainingÑards.Take(countAddCart).ToList();
+            List<CardSO> addCards = hand.remainingÑards.Take(countAddCart).ToList();
             Spawn(addCards);
 
-            remainingÑards = ListCut(remainingÑards, addCards);
+            hand.remainingÑards = ListCut(hand.remainingÑards, addCards);
            
         }
         else
@@ -100,11 +99,11 @@ public class DeckPanel : MonoBehaviour
 
     public void Clear()
     {
-        foreach (CardView item in _deck)
+        foreach (CardView item in hand.cardOnHand)
         {
            // item.Click -= OnItemViewClick; íàïîìèíàíèå îòïèñûâàòüñÿ îò èâåíòîâ
             Destroy(item.gameObject);
         }
-        _deck.Clear();
+        hand.cardOnHand.Clear();
     }
 }

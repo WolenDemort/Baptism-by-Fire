@@ -29,21 +29,19 @@ public class CardZone : MonoBehaviour, IDropHandler
         if ((ZoneType & buffLines) != 0 && transform.childCount>0 )
             return;
         card.transform.SetParent(transform);
-
-      
-       
-
+              
         tableZone.DropCardOnZone(card);
         //card.checkSpell проверить спелл 
-
+        if (card.GetComponent<ICardSpell>() != null) 
+        {
+            card.GetComponent<ICardSpell>().Spell();
+        }
         if (!card.GetComponent<SpellCardVeiw>())
         {
-            cards.Add(card.GetComponent<RegularCardScoreControl>());
-            line.CalculateScore(cards);
+          //  cards.Add(card.GetComponent<RegularCardScoreControl>());
+            line.AddCardOnLine(card.GetComponent<RegularCardScoreControl>());
         }
-
-        card.GetComponent<CardSpell>().Spell();
-
+       
     }
 
     

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CardSpell : MonoBehaviour
+public interface ICardSpell 
 {
-
-    public abstract void Spell();
+    public void Spell();
 }

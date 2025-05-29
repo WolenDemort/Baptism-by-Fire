@@ -8,19 +8,16 @@ public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
 {
     public bool IsDraggable=true;
     public Image img;
-
-
-    //Dictionary <key="Тип способности", значение = "сама функция способности/ивет для вызова"> spellAction
-    //
+    private Vector3 offset;      
+    [HideInInspector] public RectTransform parentAfterDrag;   
+     private RectTransform rect;
+    
         
  
-    private Vector3 offset;
-      
-    [HideInInspector] public RectTransform parentAfterDrag;
-   
-    private RectTransform rect;
+    
+    //Dictionary <key="Тип способности", значение = "сама функция способности/ивет для вызова"> spellAction
+    //
 
- 
 
     void Start() {
         rect = GetComponent<RectTransform>();
@@ -59,8 +56,6 @@ public class CardController : MonoBehaviour, IDragHandler, IEndDragHandler, IBeg
         if (!IsDraggable)    
             return;
 
-
-        
         rect.SetParent(parentAfterDrag);
         img.raycastTarget = true;      
     }

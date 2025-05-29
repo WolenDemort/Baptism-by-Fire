@@ -8,7 +8,7 @@ public class PlayingDeck : ScriptableObject
 {
    
    [SerializeField] private List<CardSO> _allCards;
-    public IEnumerable<CardSO> AllCards => _allCards;
+    public List<CardSO> AllCards => _allCards;
    
 }
 

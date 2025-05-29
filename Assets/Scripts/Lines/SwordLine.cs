@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class SwordLine : Line
 {
-    public override void CalculateScore(List<RegularCardScoreControl> cards)
+    public override void CalculateScore(/*list<RegularCardScoreControl> cards*/)
     {
-        base.CalculateScore(cards);
+        base.CalculateScore(/*cards*/);
     }
 
+    public void DebuffLine()
+    {
+       
+        SetDebuff(true);
+        CalculateScore();
+
+    }
 
     void Awake()
     {

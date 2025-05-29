@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class CatapultesLine : Line
 {
-    public override void CalculateScore(List<RegularCardScoreControl> cards)
+    public override void CalculateScore()
     {
-        base.CalculateScore(cards);
+        base.CalculateScore();
 
     }
+    public void DebuffLine()
+    {
 
+        SetDebuff(true);
+        CalculateScore();
+
+    }
     void Awake()
     {
         base.StartScore();

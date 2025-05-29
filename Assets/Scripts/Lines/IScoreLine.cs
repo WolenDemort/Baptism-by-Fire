@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IScoreLine 
 {
-    public void CalculateScore(List<RegularCardScoreControl> cards);
+    public void CalculateScore();
     
 
 

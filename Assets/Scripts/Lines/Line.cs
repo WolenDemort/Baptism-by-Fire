@@ -5,23 +5,66 @@ using TMPro;
 public abstract class Line : MonoBehaviour, IScoreLine
 {
     [SerializeField]
-    protected GameObject bigLine;
+    protected Transform bigLine;
     [SerializeField]
-    protected GameObject buffLine;
+    protected Transform buffLine;
     [SerializeField]
     protected TMP_Text lineScore;
     protected int currentScrore;
     [SerializeField]
     ScoreControl globalScore;
 
-    
+    protected List<RegularCardScoreControl> cardOnLine=new();
 
-    public virtual void CalculateScore(List<RegularCardScoreControl> cards) { // подсчет карт
+    protected bool doubleBuff = false;
+    protected bool oneBuff = false;
+    protected bool debuff = false;
+
+    public virtual void AddCardOnLine(RegularCardScoreControl card)
+    {
+        cardOnLine.Add(card);
+        CalculateScore();
+    }
+    public virtual void RemoveCardOnLine(RegularCardScoreControl card)
+    {
+        cardOnLine.Remove(card);
+        CalculateScore();
+    }
+    public virtual void CalculateScore() { // подсчет карт
         currentScrore = 0;
                   
-        foreach (var card in cards)
+        foreach (var card in cardOnLine)
         {
-            currentScrore += card.CurrentScore;
+            int temp = 0;
+            if (debuff)
+            {
+                card.OnDebuffScore();
+                temp = card.CurrentScore();
+
+            }
+            else
+            {
+                card.OffDebuffScore();
+                temp = card.CurrentScore();
+            }
+            if (oneBuff)
+            {
+                card.OneBuffScore();
+                temp = card.CurrentScore();
+               
+            }
+            if (doubleBuff)
+            {
+                card.OnDoubleBuffScore();
+                temp = card.CurrentScore();
+               
+            }
+            else
+            {
+                temp = card.CurrentScore();
+                
+            }
+            currentScrore += temp;
         }
        
         UpdateScore();
@@ -32,6 +75,18 @@ public abstract class Line : MonoBehaviour, IScoreLine
         currentScrore = 0;
         lineScore.text = currentScrore.ToString();        
     }
+    public void SetDebuff(bool status)
+    {
+        debuff = status;
+    }
+    public void SetDoubleBuff(bool status)
+    {
+        doubleBuff = status;
+    } 
+    public void SetOneBuff(bool status)
+    {
+        oneBuff = status;
+    }
 
     protected void UpdateScore()
     {
@@ -40,5 +95,9 @@ public abstract class Line : MonoBehaviour, IScoreLine
     }
 
     public int Score => currentScrore;
-    public GameObject bgLe => bigLine; 
+    public Transform BigLine => bigLine; 
+    public Transform BuffLine => buffLine; 
+
+
+
 }
